@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce">
+
+    <listeners>
+        <listeners class-name="commons.Nopcommerce.MethodListener"></listeners>
+    </listeners>
+
+    <parameter name="url" value="https://demo.nopcommerce.com/" />
+
+    <test name="Run on Chrome">
+        <parameter name="browser" value = "chrome"/>
+        <classes>
+                <class name="com.nopcommerce.user.User_02_Register"/>
+        </classes>
+    </test>
+</suite>
