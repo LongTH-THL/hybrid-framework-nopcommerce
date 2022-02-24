@@ -1,17 +1,16 @@
 package com.nopcommerce.user;
 
-import commons.Nopcommerce.BaseTest;
-import commons.Nopcommerce.PageGeneratorManager;
+import commons.BaseTest;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageFactory.UserHomePageObject;
-import pageObject.NopCommerce.user.UserLoginPageObject;
-import pageObject.NopCommerce.user.UserCustomerInfoPageObject;
-import pageObject.NopCommerce.user.UserRegisterPageObject;
+import pageObject.user.UserHomePageObject;
+import pageObject.user.UserLoginPageObject;
+import pageObject.user.UserCustomerInfoPageObject;
+import pageObject.user.UserRegisterPageObject;
 
 public class User_01_Login extends BaseTest {
     private WebDriver driver;
@@ -117,7 +116,7 @@ public class User_01_Login extends BaseTest {
 
         veryfiTrue(homePage.isMyAccountLinkDisplay());
 
-        homePage.clickToMyAccount();
+        homePage.clickToMyAccountLink();
 
     }
 

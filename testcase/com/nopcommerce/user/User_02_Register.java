@@ -1,14 +1,13 @@
 package com.nopcommerce.user;
 
-import commons.Nopcommerce.BaseTest;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.NopCommerce.user.UserHomePageObject;
-import pageObject.NopCommerce.user.UserRegisterPageObject;
+import pageObject.user.UserHomePageObject;
+import pageObject.user.UserRegisterPageObject;
 
 import java.util.Random;
 
@@ -34,7 +33,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_01_Empty_Data(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.clickToRegisterButton();
@@ -50,7 +49,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_02_Invalid_Email(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.inputToFirstnameTextbox(firstName);
@@ -66,7 +65,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_03_Success(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.inputToFirstnameTextbox(firstName);
@@ -85,7 +84,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_04_Exiting_Email(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.inputToFirstnameTextbox(firstName);
@@ -103,7 +102,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_05_Password_Less_Than_6_Chars(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.inputToFirstnameTextbox(firstName);
@@ -121,7 +120,7 @@ public class User_02_Register extends BaseTest {
 
     @Test
     public void Register_06_Invalid_Confirm_Password(){
-        homePage.openToRegisterPage();
+        homePage.clickToRegisterLink();
         registerPage = new UserRegisterPageObject(driver);
 
         registerPage.inputToFirstnameTextbox(firstName);

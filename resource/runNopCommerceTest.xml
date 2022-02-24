@@ -2,7 +2,7 @@
 <suite name="NopCommerce">
 
     <listeners>
-        <listeners class-name="commons.Nopcommerce.MethodListener"></listeners>
+        <listeners class-name="commons.MethodListener"></listeners>
     </listeners>
 
     <parameter name="url" value="https://demo.nopcommerce.com/" />
