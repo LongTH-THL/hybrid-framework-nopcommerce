@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="8.585">
+  <properties />
+  
+  
+            <testcase name="User_01_Register_Login" time="8.585" classname="com.nopcommerce.baihoc.User_06_Dynamic_Locator" />
+      
+</testsuite>

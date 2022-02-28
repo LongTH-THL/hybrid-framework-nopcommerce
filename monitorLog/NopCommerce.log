@@ -1,0 +1,96 @@
+[INFO ] [2022-02-26 23:24:22,549] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-26 23:24:22,580] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-26 23:24:25,437] User_01_Register - Step_03: Enter to First Name Textboxautomation
+[INFO ] [2022-02-26 23:24:25,729] User_01_Register - Step_04: Enter to Last Name TextboxFC
+[INFO ] [2022-02-26 23:24:25,866] User_01_Register - Step_05: Enter to Email Textboxauto396769@gmail.com
+[INFO ] [2022-02-26 23:24:25,985] User_01_Register - Step_06: Enter to Pass Textbox123456
+[INFO ] [2022-02-26 23:24:26,164] User_01_Register - Step_07: Enter to Confirm Pass Textbox123456
+[INFO ] [2022-02-26 23:24:26,344] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-26 23:24:27,671] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-26 23:24:27,720] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-26 23:24:28,820] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-26 23:24:29,518] User_01_Register - Step_12: Enter to Email Textboxauto396769@gmail.com
+[INFO ] [2022-02-26 23:24:29,609] User_01_Register - Step_13: Enter to Pass Textbox123456
+[INFO ] [2022-02-26 23:24:29,726] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-26 23:24:30,671] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-26 23:24:30,723] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-02-26 23:25:57,453] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-26 23:25:57,489] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-26 23:26:00,455] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-02-26 23:26:00,687] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-02-26 23:26:00,815] User_01_Register - Step_05: Enter to Email Textbox: auto565122@gmail.com
+[INFO ] [2022-02-26 23:26:00,945] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-26 23:26:01,132] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-02-26 23:26:01,302] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-26 23:26:02,764] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-26 23:26:02,829] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-26 23:26:03,761] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-26 23:26:04,431] User_01_Register - Step_12: Enter to Email Textbox: auto565122@gmail.com
+[INFO ] [2022-02-26 23:26:04,527] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-26 23:26:04,628] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-26 23:26:05,606] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-26 23:26:05,655] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-02-27 17:21:15,878] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-27 17:21:15,909] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-27 17:21:18,824] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-02-27 17:21:19,125] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-02-27 17:21:19,244] User_01_Register - Step_05: Enter to Email Textbox: auto820781@gmail.com
+[INFO ] [2022-02-27 17:21:19,367] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:21:19,522] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-02-27 17:21:19,683] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-27 17:21:21,240] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-27 17:21:21,292] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-27 17:21:22,303] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-27 17:21:23,050] User_01_Register - Step_12: Enter to Email Textbox: auto820781@gmail.com
+[INFO ] [2022-02-27 17:21:23,144] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:21:23,239] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-27 17:21:24,223] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-27 17:21:24,273] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-02-27 17:29:31,616] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-27 17:29:31,644] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-27 17:29:34,483] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-02-27 17:29:34,799] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-02-27 17:29:34,914] User_01_Register - Step_05: Enter to Email Textbox: auto353226@gmail.com
+[INFO ] [2022-02-27 17:29:35,026] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:29:35,181] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-02-27 17:29:35,331] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-27 17:29:36,904] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-27 17:29:36,967] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-27 17:29:37,880] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-27 17:29:38,612] User_01_Register - Step_12: Enter to Email Textbox: auto353226@gmail.com
+[INFO ] [2022-02-27 17:29:38,703] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:29:38,804] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-27 17:29:39,700] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-27 17:29:39,750] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-02-27 17:34:02,891] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-27 17:34:02,924] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-27 17:34:05,977] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-02-27 17:34:06,284] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-02-27 17:34:06,405] User_01_Register - Step_05: Enter to Email Textbox: auto209702@gmail.com
+[INFO ] [2022-02-27 17:34:06,523] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:34:06,686] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-02-27 17:34:06,827] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-27 17:34:08,091] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-27 17:34:08,162] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-27 17:34:09,389] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-27 17:34:10,425] User_01_Register - Step_12: Enter to Email Textbox: auto209702@gmail.com
+[INFO ] [2022-02-27 17:34:10,520] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 17:34:10,622] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-27 17:34:11,588] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-27 17:34:11,637] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-02-27 23:15:14,790] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-02-27 23:15:14,823] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-02-27 23:15:17,748] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-02-27 23:15:18,088] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-02-27 23:15:18,205] User_01_Register - Step_05: Enter to Email Textbox: auto747034@gmail.com
+[INFO ] [2022-02-27 23:15:18,323] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 23:15:18,500] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-02-27 23:15:18,681] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-02-27 23:15:20,073] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-02-27 23:15:20,121] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-02-27 23:15:21,012] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-02-27 23:15:21,673] User_01_Register - Step_12: Enter to Email Textbox: auto747034@gmail.com
+[INFO ] [2022-02-27 23:15:21,770] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-02-27 23:15:21,869] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-02-27 23:15:22,738] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-02-27 23:15:22,785] User_01_Register - Step_16: Verify customer info page is display
