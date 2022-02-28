@@ -1,7 +1,10 @@
 package commons;
 
+import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -265,7 +268,59 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locatorType) {
-        return getWebElement(driver, locatorType).isDisplayed();
+        try {
+            return getWebElement(driver, locatorType).isDisplayed();
+        } catch (NoSuchElementException e){
+            return false;
+        }
+    }
+
+    public void overrideGlobalTimeout(WebDriver driver, long timeOut){
+        driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+    }
+
+    public boolean isElementUndisplay(WebDriver driver, String locatorType){
+
+        overrideGlobalTimeout(driver,shortTimeout);
+        List<WebElement> elements = getListWebElement(driver,locatorType);
+        overrideGlobalTimeout(driver,longTimeout);
+
+        if(elements.size()==0){
+            return true;
+        } else if(elements.size()>0 && !elements.get(0).isDisplayed()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isElementUndisplay(WebDriver driver, String locatorType, String... dynamicValues){
+        System.out.println("Start time =" + new Date().toString());
+
+        overrideGlobalTimeout(driver,5);
+        List<WebElement> elements = getListWebElement(driver,getDynamicXpath(locatorType, dynamicValues));
+        overrideGlobalTimeout(driver,30);
+
+        if(elements.size()==0){
+            System.out.println("Element not in DOM");
+            System.out.println("Start time =" + new Date().toString());
+            return true;
+        } else if(elements.size()>0 && !elements.get(0).isDisplayed()){
+            System.out.println("Element in DOM but not visible/displayed");
+            System.out.println("Start time =" + new Date().toString());
+            return true;
+        } else {
+            System.out.println("Element in DOM and visible");
+            return false;
+        }
+    }
+
+    public boolean isElementUndisplayed(WebDriver driver, String locatorType) {
+        boolean status = true;
+        if(getWebElement(driver, locatorType).isDisplayed()){
+            status = false;
+        }
+        return status;
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
@@ -464,6 +519,13 @@ public class BasePage {
         explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, getDynamicXpath(locatorType, dynamicValues))));
     }
 
+    public void waitForElementUndisplay(WebDriver driver, String locatorType) {
+        WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeout);
+        overrideGlobalTimeout(driver, shortTimeout);
+        explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElement(driver, locatorType)));
+        overrideGlobalTimeout(driver, longTimeout);
+    }
+
     public void waitForElementClickable(WebDriver driver, String locatorType) {
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
@@ -572,4 +634,5 @@ public class BasePage {
 
 
     private long longTimeout = GlobalConstains.LONG_TIME;
+    private long shortTimeout = GlobalConstains.SHORT_TIME;
 }

@@ -1,6 +1,8 @@
 package commons;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -13,6 +15,14 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
+    protected final Log log;
+
+    protected BaseTest(){
+        log = LogFactory.getLog(getClass());
+    }
+
+
+
     protected WebDriver getBrowserDriver(String browserName, String appUrl){
         if(browserName.equals("chrome")){
             WebDriverManager.chromedriver().setup();
