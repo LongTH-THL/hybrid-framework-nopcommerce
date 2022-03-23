@@ -15,11 +15,11 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObject.admin.AdminLoginPageObject;
 import pageObject.user.*;
+import pageUIs.jQuery.UploadFile.BasePageUploadFile;
 import pageUIs.user.BasePageUI;
 
 
 public class BasePage {
-
     // Open URL
     public void openPageUrl(WebDriver driver, String pageUrl) {
         driver.get(pageUrl);
@@ -280,7 +280,6 @@ public class BasePage {
     }
 
     public boolean isElementUndisplay(WebDriver driver, String locatorType){
-
         overrideGlobalTimeout(driver,shortTimeout);
         List<WebElement> elements = getListWebElement(driver,locatorType);
         overrideGlobalTimeout(driver,longTimeout);
@@ -536,15 +535,15 @@ public class BasePage {
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
     }
 
-//    public void uploadMultipleFile(WebDriver driver, String... fileNames){
-//        String filePath = GlobalConstains.UPLOAD_FILE;
-//        String fullFileName = "";
-//        for (String file:fileNames){
-//            fullFileName = fullFileName + filePath + file;
-//        }
-//        fullFileName = fullFileName.trim();
-//        getWebElement(driver, BasePageUploadFile.UPLOAD_FILE).sendKeys(fullFileName);
-//    }
+    public void uploadMultipleFile(WebDriver driver, String... fileNames){
+        String filePath = GlobalConstains.UPLOAD_FILE;
+        String fullFileName = "";
+        for (String file:fileNames){
+            fullFileName = fullFileName + filePath + file;
+        }
+        fullFileName = fullFileName.trim();
+        getWebElement(driver, BasePageUploadFile.UPLOAD_FILE).sendKeys(fullFileName);
+    }
 
     public void sleepInSecond(long timeoutInSecond) {
         try {
@@ -630,8 +629,15 @@ public class BasePage {
 
     }
 
+    public Set<Cookie> getAllCookies(WebDriver driver){
+        return  driver.manage().getCookies();
+    }
 
-
+    public void setAllCookies(WebDriver driver, Set<Cookie> allCookies){
+        for (Cookie cookie: allCookies){
+            driver.manage().addCookie(cookie);
+        }
+    }
 
     private long longTimeout = GlobalConstains.LONG_TIME;
     private long shortTimeout = GlobalConstains.SHORT_TIME;

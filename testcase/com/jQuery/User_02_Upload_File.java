@@ -1,6 +1,6 @@
 package com.jQuery;
 
-import commons.Nopcommerce.BaseTest;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -15,7 +15,7 @@ public class User_02_Upload_File extends BaseTest {
     HomePageObject homePage;
     String picnicFileName = "Picnic.jpg";
     String aDaoFileName = "a Dao.jpeg";
-    String[] multipleFileNames= {aDaoFileName};
+    String[] multipleFileNames= {aDaoFileName,picnicFileName};
 
 
     @Parameters({"browser","url"})

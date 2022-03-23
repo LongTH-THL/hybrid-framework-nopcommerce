@@ -1,6 +1,6 @@
 package pageObject.jQuery.DataTable;
 
-import commons.Nopcommerce.BasePage;
+import commons.BasePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,16 +34,17 @@ public class HomePageObject extends BasePage {
     }
 
     public List<String> getValueEachRowAtAllPage() {
+        // lấy ra số lượng page
         int totalPage = getElementSize(driver, HomePageUI.TOTAL_PAGINATION);
         List<String> allRowValue = new ArrayList<String>();
         // Khong luu trung nhau
         Set<String> allRowUniqueValue = new HashSet<String>();
 
-        // duyet qua tat ca page
+        // duyệt qua tất cả các page
         for (int index = 1; index <= totalPage; index ++){
             clickToElement(driver,HomePageUI.PAGINATION_INDEX,String.valueOf(index));
 
-            // get text moi row dua vao array list
+            // lấy ra giá trị các row trong tất cả các page
             List<WebElement> allRowElementEachPage = getListWebElement(driver, HomePageUI.ALL_ROW_COUNTRY_EACH_PAGE);
             for (WebElement eachRow:allRowElementEachPage){
                 allRowUniqueValue.add(eachRow.getText());

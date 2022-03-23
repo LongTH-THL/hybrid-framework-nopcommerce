@@ -1,6 +1,6 @@
 package pageObject.jQuery.UploadFile;
 
-import commons.Nopcommerce.BasePage;
+import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pageUIs.jQuery.UploadFile.HomePageUI;

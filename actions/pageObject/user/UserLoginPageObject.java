@@ -3,6 +3,7 @@ package pageObject.user;
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
+import pageObject.jQuery.DataTable.HomePageObject;
 import pageUIs.user.LoginPageUi;
 
 public class UserLoginPageObject extends BasePage {
@@ -42,5 +43,11 @@ public class UserLoginPageObject extends BasePage {
         inputToEmailTextbox(email);
         inputToPasswordTextbox(password);
         return clickToLoginButton();
+    }
+
+    public UserHomePageObject openHomePage() {
+        waitForElementClickable(driver, LoginPageUi.HOMEPAGE_IMG);
+        clickToElement(driver, LoginPageUi.HOMEPAGE_IMG);
+        return PageGeneratorManager.getUserHomePage(driver);
     }
 }

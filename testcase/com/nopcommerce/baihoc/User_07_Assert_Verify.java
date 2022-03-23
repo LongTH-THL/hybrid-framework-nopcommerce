@@ -1,15 +1,12 @@
 package com.nopcommerce.baihoc;
 
-import commons.Nopcommerce.BaseTest;
-import commons.Nopcommerce.PageGeneratorManager;
+import commons.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pageFactory.UserHomePageObject;
-import pageObject.NopCommerce.user.*;
 
-@Listeners(commons.Nopcommerce.MethodListener.class)
+@Listeners(commons.MethodListener.class)
 public class User_07_Assert_Verify extends BaseTest {
     private WebDriver driver;
 
@@ -20,7 +17,7 @@ public class User_07_Assert_Verify extends BaseTest {
     }
 
     @Test
-    public void Vrify_01_ValidateCurrentURL(){
+    public void Verify_01_ValidateCurrentURL(){
         System.out.println("Verify_01_Pass");
         String loginURL = driver.getCurrentUrl();
         verifyEquals(loginURL, "https://vi-vn.facebook.com/");

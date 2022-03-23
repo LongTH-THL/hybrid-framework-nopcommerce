@@ -1,6 +1,6 @@
 package pageObject.Facebook;
 
-import commons.Nopcommerce.BasePage;
+import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.Facebook.LoginPageUIs;
 

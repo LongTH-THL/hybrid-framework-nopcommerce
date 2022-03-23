@@ -6,8 +6,5 @@
            skipped="0"
            time="8.585">
   <properties />
-  
-  
             <testcase name="User_01_Register_Login" time="8.585" classname="com.nopcommerce.baihoc.User_06_Dynamic_Locator" />
-      
 </testsuite>

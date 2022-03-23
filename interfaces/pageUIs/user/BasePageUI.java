@@ -19,7 +19,6 @@ public class BasePageUI {
         clickToSideBarLink(DYNAMIC_PAGE_AT_MY_ACCOUT_AREA,"Addresses");
         clickToSideBarLink(DYNAMIC_PAGE_AT_MY_ACCOUT_AREA,"Reward points");
         clickToSideBarLink(DYNAMIC_PAGE_AT_MY_ACCOUT_AREA,"My product reviews");
-
     }
 
     // hàm có 1-n tham số động -> sử dụng hàm này để truyền tham số

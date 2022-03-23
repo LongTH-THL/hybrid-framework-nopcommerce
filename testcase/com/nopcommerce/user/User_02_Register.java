@@ -60,7 +60,7 @@ public class User_02_Register extends BaseTest {
 
         registerPage.clickToRegisterButton();
 
-        verifyEquals(registerPage.getErrorMessageAtEmailTextbox(),"Wrong email");
+        verifyEquals(registerPage.getErrorMessageAtEmailTextbox(),"Wrong email.");
     }
 
     @Test

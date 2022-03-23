@@ -1,6 +1,6 @@
 package com.jQuery;
 
-import commons.Nopcommerce.BaseTest;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="NopCommerce" parallel = "tests">
 
     <listeners>
-        <listeners class-name="commons.MethodListener"></listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ExtentTestListener"/>
+        <listener class-name="reportConfig.ReportNG"/>
     </listeners>
 
     <parameter name="url" value="https://demo.nopcommerce.com/" />
@@ -10,7 +14,8 @@
     <test name="Run on Chrome">
         <parameter name="browser" value = "chrome"/>
         <classes>
-                <class name="com.nopcommerce.user.User_02_Register"/>
+            <class name="com.nopcommerce.commons.Commons_01_Login"/>
+            <class name="com.nopcommerce.baihoc.User_08_Register_Login_Share_State"/>
         </classes>
     </test>
 </suite>

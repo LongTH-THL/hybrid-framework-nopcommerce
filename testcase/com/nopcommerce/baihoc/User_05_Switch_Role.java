@@ -1,18 +1,18 @@
 package com.nopcommerce.baihoc;
 
-import commons.Nopcommerce.BaseTest;
-import commons.Nopcommerce.GlobalConstains;
-import commons.Nopcommerce.PageGeneratorManager;
+import commons.BaseTest;
+import commons.GlobalConstains;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageFactory.UserHomePageObject;
-import pageObject.NopCommerce.admin.AdminDashboardPageObject;
-import pageObject.NopCommerce.admin.AdminLoginPageObject;
-import pageObject.NopCommerce.user.*;
+
+import pageObject.admin.AdminDashboardPageObject;
+import pageObject.admin.AdminLoginPageObject;
+import pageObject.user.*;
 
 public class User_05_Switch_Role extends BaseTest {
     private WebDriver driver;
@@ -47,7 +47,7 @@ public class User_05_Switch_Role extends BaseTest {
         userLoginPage = userHomePage.clickToLoginLink();
         userHomePage = userLoginPage.loginAsUser(userEmail, userPassword);
 
-        userMyAccoutPageObject = userHomePage.clickToMyAccount();
+        userMyAccoutPageObject = userHomePage.clickToMyAccountLink();
 
         userHomePage = userMyAccoutPageObject.clickTOLogoutLinkAtUser(driver);
 

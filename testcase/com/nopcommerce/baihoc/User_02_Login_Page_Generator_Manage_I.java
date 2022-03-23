@@ -1,15 +1,16 @@
 package com.nopcommerce.baihoc;
 
-import commons.Nopcommerce.BaseTest;
+import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageFactory.UserHomePageObject;
-import pageObject.NopCommerce.user.UserLoginPageObject;
-import pageObject.NopCommerce.user.UserRegisterPageObject;
+
+import pageObject.user.UserHomePageObject;
+import pageObject.user.UserLoginPageObject;
+import pageObject.user.UserRegisterPageObject;
 
 public class User_02_Login_Page_Generator_Manage_I extends BaseTest {
     private WebDriver driver;

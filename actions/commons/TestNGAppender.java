@@ -1,4 +1,4 @@
-package commons.Nopcommerce;
+package commons;
 
 import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.spi.LoggingEvent;
@@ -11,7 +11,7 @@ public class TestNGAppender extends AppenderSkeleton {
 
     @Override
     protected void append(LoggingEvent event) {
-        Reporter.log(getLayout().format(event));
+        Reporter.log(getLayout().format(event) + "<br>");
     }
 
     @Override

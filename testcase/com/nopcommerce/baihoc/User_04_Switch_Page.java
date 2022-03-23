@@ -1,15 +1,15 @@
 package com.nopcommerce.baihoc;
 
-import commons.Nopcommerce.BaseTest;
-import commons.Nopcommerce.PageGeneratorManager;
+import commons.BaseTest;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageFactory.UserHomePageObject;
-import pageObject.NopCommerce.user.*;
+
+import pageObject.user.*;
 
 public class User_04_Switch_Page extends BaseTest {
     private WebDriver driver;
@@ -67,7 +67,7 @@ public class User_04_Switch_Page extends BaseTest {
 
     @Test
     public void User_03_My_Account(){
-        customerInfoPage = homePage.clickToMyAccount();
+        customerInfoPage = homePage.clickToMyAccountLink();
 
         Assert.assertTrue(customerInfoPage.idCustomerInfoPageDisplay());
 

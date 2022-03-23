@@ -94,3 +94,98 @@
 [INFO ] [2022-02-27 23:15:21,869] User_01_Register - Step_14: Click Login button
 [INFO ] [2022-02-27 23:15:22,738] User_01_Register - Step_15: Verify My Account link is display
 [INFO ] [2022-02-27 23:15:22,785] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-03-03 00:35:33,652] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-03-03 00:35:33,660] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-03-03 00:35:36,363] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-03-03 00:35:36,671] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-03-03 00:35:36,789] User_01_Register - Step_05: Enter to Email Textbox: auto400000@gmail.com
+[INFO ] [2022-03-03 00:35:36,900] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:35:37,056] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-03-03 00:35:37,230] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-03-03 00:35:38,453] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-03-03 00:35:38,515] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-03-03 00:35:39,372] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-03-03 00:35:39,856] User_01_Register - Step_12: Enter to Email Textbox: auto400000@gmail.com
+[INFO ] [2022-03-03 00:35:39,945] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:35:40,044] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-03-03 00:35:40,983] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-03-03 00:35:41,029] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-03-03 00:38:05,007] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-03-03 00:38:05,013] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-03-03 00:38:07,764] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-03-03 00:38:08,034] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-03-03 00:38:08,152] User_01_Register - Step_05: Enter to Email Textbox: auto200491@gmail.com
+[INFO ] [2022-03-03 00:38:08,266] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:38:08,435] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-03-03 00:38:08,596] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-03-03 00:38:09,791] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-03-03 00:38:09,845] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-03-03 00:38:10,799] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-03-03 00:38:11,361] User_01_Register - Step_12: Enter to Email Textbox: auto200491@gmail.com
+[INFO ] [2022-03-03 00:38:11,448] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:38:11,542] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-03-03 00:38:12,549] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-03-03 00:38:12,606] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-03-03 00:39:45,080] User_01_Register - Step_01: Verify Home Page is display
+[INFO ] [2022-03-03 00:39:45,087] User_01_Register - Step_02: Click to Register Link
+[INFO ] [2022-03-03 00:39:47,781] User_01_Register - Step_03: Enter to First Name Textbox: automation
+[INFO ] [2022-03-03 00:39:48,037] User_01_Register - Step_04: Enter to Last Name Textbox: FC
+[INFO ] [2022-03-03 00:39:48,158] User_01_Register - Step_05: Enter to Email Textbox: auto150338@gmail.com
+[INFO ] [2022-03-03 00:39:48,269] User_01_Register - Step_06: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:39:48,472] User_01_Register - Step_07: Enter to Confirm Pass Textbox: 123456
+[INFO ] [2022-03-03 00:39:48,615] User_01_Register - Step_08: Click to register button
+[INFO ] [2022-03-03 00:39:49,594] User_01_Register - Step_09: Verify Success Message is display
+[INFO ] [2022-03-03 00:39:49,648] User_01_Register - Step_10: Verify Home Page is Display
+[INFO ] [2022-03-03 00:39:50,427] User_01_Register - Step_11: Verify Login Page is Display
+[INFO ] [2022-03-03 00:39:50,982] User_01_Register - Step_12: Enter to Email Textbox: auto150338@gmail.com
+[INFO ] [2022-03-03 00:39:51,074] User_01_Register - Step_13: Enter to Pass Textbox: 123456
+[INFO ] [2022-03-03 00:39:51,172] User_01_Register - Step_14: Click Login button
+[INFO ] [2022-03-03 00:39:51,936] User_01_Register - Step_15: Verify My Account link is display
+[INFO ] [2022-03-03 00:39:51,983] User_01_Register - Step_16: Verify customer info page is display
+[INFO ] [2022-03-03 01:02:39,273] Login_01_Empty_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 01:02:39,901] Login_01_Empty_Data - Step_02: Click Login Button
+[INFO ] [2022-03-03 01:02:40,035] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 01:02:40,081] Login_02_Invalid_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 01:02:40,546] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
+[INFO ] [2022-03-03 01:02:40,646] Login_02_Invalid_Data - Step_03: Click login button
+[INFO ] [2022-03-03 01:02:40,747] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:13:55,073] Login_01_Empty_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:13:57,107] Login_01_Empty_Data - Step_02: Click Login Button
+[INFO ] [2022-03-03 23:13:57,239] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:13:57,282] Login_02_Invalid_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:13:57,891] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
+[INFO ] [2022-03-03 23:13:57,995] Login_02_Invalid_Data - Step_03: Click login button
+[INFO ] [2022-03-03 23:13:58,095] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:19:59,583] Login_01_Empty_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:20:00,173] Login_01_Empty_Data - Step_02: Click Login Button
+[INFO ] [2022-03-03 23:20:00,303] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:20:00,386] Login_02_Invalid_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:20:00,943] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
+[INFO ] [2022-03-03 23:20:01,040] Login_02_Invalid_Data - Step_03: Click login button
+[INFO ] [2022-03-03 23:20:01,141] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:31:01,129] Login_01_Empty_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:31:01,999] Login_01_Empty_Data - Step_02: Click Login Button
+[INFO ] [2022-03-03 23:31:02,133] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:31:02,175] Login_02_Invalid_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:31:02,727] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
+[INFO ] [2022-03-03 23:31:02,825] Login_02_Invalid_Data - Step_03: Click login button
+[INFO ] [2022-03-03 23:31:02,937] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:42:22,172] ---------- START delete file in folder ----------
+[INFO ] [2022-03-03 23:42:22,178] ---------- END delete file in folder ----------
+[INFO ] [2022-03-03 23:42:33,066] Login_01_Empty_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:42:33,690] Login_01_Empty_Data - Step_02: Click Login Button
+[INFO ] [2022-03-03 23:42:33,821] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
+[INFO ] [2022-03-03 23:42:33,864] Login_02_Invalid_Data - Step_01: Verify Login Page is display
+[INFO ] [2022-03-03 23:42:34,386] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
+[INFO ] [2022-03-03 23:42:34,488] Login_02_Invalid_Data - Step_03: Click login button
+[INFO ] [2022-03-03 23:42:34,587] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox
+[INFO ] [2022-03-04 23:46:04,559] ---------- START delete file in folder ----------
+[INFO ] [2022-03-04 23:46:04,562] ---------- END delete file in folder ----------
+[INFO ] [2022-03-04 23:50:44,794] ---------- START delete file in folder ----------
+[INFO ] [2022-03-04 23:50:44,796] ---------- END delete file in folder ----------
+[INFO ] [2022-03-08 17:52:13,490] ---------- START delete file in folder ----------
+[INFO ] [2022-03-08 17:52:13,492] ---------- END delete file in folder ----------
+[INFO ] [2022-03-21 23:25:09,006] ---------- START delete file in folder ----------
+[INFO ] [2022-03-21 23:25:09,009] ---------- END delete file in folder ----------
+[INFO ] [2022-03-21 23:25:49,191] OS name = mac os x
+[INFO ] [2022-03-21 23:25:49,192] Driver instance name = mac os x
