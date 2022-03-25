@@ -189,3 +189,53 @@
 [INFO ] [2022-03-21 23:25:09,009] ---------- END delete file in folder ----------
 [INFO ] [2022-03-21 23:25:49,191] OS name = mac os x
 [INFO ] [2022-03-21 23:25:49,192] Driver instance name = mac os x
+[INFO ] [2022-03-24 00:59:03,650] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 00:59:03,653] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 00:59:39,190] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 00:59:39,192] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:02:56,097] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:02:56,099] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:03:02,465] User_01_Register - Step_01: Verify Home page is Displayed
+[INFO ] [2022-03-24 01:03:02,594] User_01_Register - Step_02: Click Register Link
+[INFO ] [2022-03-24 01:03:03,212] User_01_Register - Step_03: Enter To First Name Textbox
+[INFO ] [2022-03-24 01:03:03,422] User_01_Register - Step_04: Enter To Last Name Textbox
+[INFO ] [2022-03-24 01:03:03,531] User_01_Register - Step_05: Enter To Email Address Textbox
+[INFO ] [2022-03-24 01:03:03,644] User_01_Register - Step_06: Enter To Password Textbox
+[INFO ] [2022-03-24 01:03:03,816] User_01_Register - Step_07: Enter To Confirm Password Textbox
+[INFO ] [2022-03-24 01:03:03,948] User_01_Register - Step_08: Click to Register Button
+[INFO ] [2022-03-24 01:03:05,172] User_01_Register - Step_09: Verify Register Success Message
+[INFO ] [2022-03-24 01:03:05,222] User_01_Register - Step_10: Click to Log out Link
+[INFO ] [2022-03-24 01:05:59,241] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:05:59,243] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:06:06,793] User_01_Register - Step_01: Verify Home page is Displayed
+[INFO ] [2022-03-24 01:06:06,924] User_01_Register - Step_02: Click Register Link
+[INFO ] [2022-03-24 01:06:07,615] User_01_Register - Step_03: Enter To First Name Textbox
+[INFO ] [2022-03-24 01:06:07,831] User_01_Register - Step_04: Enter To Last Name Textbox
+[INFO ] [2022-03-24 01:06:07,938] User_01_Register - Step_05: Enter To Email Address Textbox
+[INFO ] [2022-03-24 01:06:08,053] User_01_Register - Step_06: Enter To Password Textbox
+[INFO ] [2022-03-24 01:06:08,249] User_01_Register - Step_07: Enter To Confirm Password Textbox
+[INFO ] [2022-03-24 01:06:08,388] User_01_Register - Step_08: Click to Register Button
+[INFO ] [2022-03-24 01:06:09,495] User_01_Register - Step_09: Verify Register Success Message
+[INFO ] [2022-03-24 01:06:09,540] User_01_Register - Step_10: Click to Log out Link
+[INFO ] [2022-03-24 01:23:04,993] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:23:04,996] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:23:11,204] User_01_Register - Step_01: Verify Home page is Displayed
+[INFO ] [2022-03-24 01:23:11,358] User_01_Register - Step_02: Click Register Link
+[INFO ] [2022-03-24 01:23:11,961] User_01_Register - Step_03: Enter To First Name Textbox
+[INFO ] [2022-03-24 01:23:12,236] User_01_Register - Step_04: Enter To Last Name Textbox
+[INFO ] [2022-03-24 01:23:12,379] User_01_Register - Step_05: Enter To Email Address Textbox
+[INFO ] [2022-03-24 01:23:12,491] User_01_Register - Step_06: Enter To Password Textbox
+[INFO ] [2022-03-24 01:23:12,672] User_01_Register - Step_07: Enter To Confirm Password Textbox
+[INFO ] [2022-03-24 01:23:12,836] User_01_Register - Step_08: Click to Register Button
+[INFO ] [2022-03-24 01:23:13,850] User_01_Register - Step_09: Verify Register Success Message
+[INFO ] [2022-03-24 01:23:13,903] User_01_Register - Step_10: Click to Log out Link
+[INFO ] [2022-03-24 01:34:18,069] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:34:18,071] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:35:20,438] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:35:20,441] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:35:55,703] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:35:55,705] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:36:38,723] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:36:38,726] ---------- END delete file in folder ----------
+[INFO ] [2022-03-24 01:37:54,285] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:37:54,287] ---------- END delete file in folder ----------

@@ -26,4 +26,7 @@ public class BasePageUI {
         String locator = String.format(dynamicLocator, (Object[]) params);
         System.out.println("Click to: " + locator);
     }
+
+    public static final String DYNAMIC_TEXTBOX_BY_ID = "xpath=//input[@id='%s']";
+    public static final String DYNAMIC_LINK_BY_TEXT = "xpath=//div[@class='header-links']//a[text()='%s']";
 }

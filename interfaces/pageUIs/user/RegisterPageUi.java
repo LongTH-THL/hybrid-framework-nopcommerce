@@ -20,4 +20,5 @@ public class RegisterPageUi {
 
     public static final String EXITING_EMAIL_ERROR_MESSAGE = "xpath=//div[contains(@class,'message-error')]//li";
 
+
 }

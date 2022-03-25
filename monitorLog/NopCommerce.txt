@@ -1,0 +1,2 @@
+[INFO ] [2022-03-24 01:37:54,285] ---------- START delete file in folder ----------
+[INFO ] [2022-03-24 01:37:54,287] ---------- END delete file in folder ----------

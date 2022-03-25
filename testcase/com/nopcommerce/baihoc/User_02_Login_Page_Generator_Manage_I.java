@@ -20,7 +20,7 @@ public class User_02_Login_Page_Generator_Manage_I extends BaseTest {
 
     private String firstName, lastName, validEmail,invalidEmail, notFoundEmail, password;
 
-    @Parameters("browser")
+    @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String appUrl){
         driver = getBrowserDriver(browserName, appUrl);

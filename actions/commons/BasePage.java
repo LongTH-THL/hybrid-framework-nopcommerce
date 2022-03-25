@@ -17,6 +17,7 @@ import pageObject.admin.AdminLoginPageObject;
 import pageObject.user.*;
 import pageUIs.jQuery.UploadFile.BasePageUploadFile;
 import pageUIs.user.BasePageUI;
+import pageUIs.user.RegisterPageUi;
 
 
 public class BasePage {
@@ -637,6 +638,16 @@ public class BasePage {
         for (Cookie cookie: allCookies){
             driver.manage().addCookie(cookie);
         }
+    }
+
+    public void enterToTextboxID(WebDriver driver, String textboxID, String value) {
+        waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_BY_ID,textboxID);
+        sendkeyToElement(driver,BasePageUI.DYNAMIC_TEXTBOX_BY_ID,value,textboxID);
+    }
+
+    public void clickToLinkByName(WebDriver driver, String linkText) {
+        waitForElementVisible(driver, BasePageUI.DYNAMIC_LINK_BY_TEXT,linkText);
+        clickToElement(driver,BasePageUI.DYNAMIC_LINK_BY_TEXT,linkText);
     }
 
     private long longTimeout = GlobalConstains.LONG_TIME;

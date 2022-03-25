@@ -1,53 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="2"
-           failures="1"
+           tests="6"
+           failures="0"
            errors="0"
            skipped="0"
-           time="1.913">
+           time="7.776">
   <properties />
-            <testcase name="Login_02_Invalid_Email" time="0.794" classname="com.nopcommerce.user.User_01_Login">
-                <failure type="java.lang.AssertionError"
-                  message="expected [Wrong email.] but found [Wrong email]"
-              >
-<![CDATA[java.lang.AssertionError: expected [Wrong email.] but found [Wrong email]
-  org.testng.Assert.fail(Assert.java:96)
-  org.testng.Assert.failNotEquals(Assert.java:776)
-  org.testng.Assert.assertEqualsImpl(Assert.java:137)
-  org.testng.Assert.assertEquals(Assert.java:118)
-  org.testng.Assert.assertEquals(Assert.java:442)
-  commons.BaseTest.verifyEquals(BaseTest.java:97)
-  com.nopcommerce.user.User_01_Login.Login_02_Invalid_Email(User_01_Login.java:87)
-  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.base/java.lang.reflect.Method.invoke(Method.java:566)
-  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-  org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-  org.testng.TestRunner.privateRun(TestRunner.java:648)
-  org.testng.TestRunner.run(TestRunner.java:505)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-  org.testng.SuiteRunner.run(SuiteRunner.java:364)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-  org.testng.TestNG.runSuites(TestNG.java:1049)
-  org.testng.TestNG.run(TestNG.java:1017)
-  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
-]]>
-      </failure>
-
-          </testcase>
   
   
-            <testcase name="Login_01_Empty_Data" time="1.119" classname="com.nopcommerce.user.User_01_Login" />
+            <testcase name="Login_03_Email_Not_Found" time="1.053" classname="com.nopcommerce.user.User_01_Login" />
+                <testcase name="Login_05_Exiting_Email_And_Incorrect_Password" time="1.498" classname="com.nopcommerce.user.User_01_Login" />
+                <testcase name="Login_01_Empty_Data" time="0.858" classname="com.nopcommerce.user.User_01_Login" />
+                <testcase name="Login_02_Invalid_Email" time="0.905" classname="com.nopcommerce.user.User_01_Login" />
+                <testcase name="Login_04_Exiting_Email_And_Emty_Password" time="1.227" classname="com.nopcommerce.user.User_01_Login" />
+                <testcase name="Login_06_Success" time="2.235" classname="com.nopcommerce.user.User_01_Login" />
       
 </testsuite>

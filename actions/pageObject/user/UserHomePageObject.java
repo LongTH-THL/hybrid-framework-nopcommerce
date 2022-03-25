@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import pageUIs.user.HomePageUI;
 
 public class UserHomePageObject extends BasePage {
+
     WebDriver driver;
 
     public UserHomePageObject(WebDriver driver) {
@@ -33,6 +34,10 @@ public class UserHomePageObject extends BasePage {
     public boolean isMyAccountLinkDisplay() {
         waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
         return isElementDisplayed(driver, HomePageUI.MY_ACCOUNT_LINK);
+    }
+    public boolean isHomePageImgIsDisplay(){
+        waitForElementVisible(driver, HomePageUI.HOME_PAGE_IMG);
+        return isElementDisplayed(driver, HomePageUI.HOME_PAGE_IMG);
     }
 
 }
