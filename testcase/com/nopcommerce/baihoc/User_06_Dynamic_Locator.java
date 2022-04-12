@@ -3,12 +3,11 @@ package com.nopcommerce.baihoc;
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.user.*;
+import pageObject.NopCommerce.user.*;
 
 public class User_06_Dynamic_Locator extends BaseTest {
     private WebDriver driver;

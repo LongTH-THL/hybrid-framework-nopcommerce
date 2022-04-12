@@ -5,7 +5,7 @@
 //import org.openqa.selenium.Cookie;
 //import org.openqa.selenium.WebDriver;
 //import org.testng.annotations.*;
-//import pageObject.user.*;
+//import pageObject.NopCommerce.user.*;
 //
 //import java.util.Set;
 //

@@ -8,7 +8,7 @@
 //import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.Parameters;
 //import org.testng.annotations.Test;
-//import pageObject.user.*;
+//import pageObject.NopCommerce.user.*;
 //
 //public class User_08_Register_Login_Share_State extends BaseTest {
 //    private WebDriver driver;

@@ -1,6 +1,5 @@
 package com.nopcommerce.baihoc;
 
-import commons.BasePage;
 import commons.BaseTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
@@ -8,9 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObject.user.UserHomePageObject;
-import pageObject.user.UserLoginPageObject;
-import pageObject.user.UserRegisterPageObject;
+import pageObject.NopCommerce.user.UserHomePageObject;
+import pageObject.NopCommerce.user.UserLoginPageObject;
+import pageObject.NopCommerce.user.UserRegisterPageObject;
 
 public class User_09_Register_Login_Pattern_Object extends BaseTest {
     private WebDriver driver;

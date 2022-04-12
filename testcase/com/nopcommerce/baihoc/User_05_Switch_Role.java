@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObject.admin.AdminDashboardPageObject;
-import pageObject.admin.AdminLoginPageObject;
-import pageObject.user.*;
+import pageObject.NopCommerce.admin.AdminDashboardPageObject;
+import pageObject.NopCommerce.admin.AdminLoginPageObject;
+import pageObject.NopCommerce.user.*;
 
 public class User_05_Switch_Role extends BaseTest {
     private WebDriver driver;

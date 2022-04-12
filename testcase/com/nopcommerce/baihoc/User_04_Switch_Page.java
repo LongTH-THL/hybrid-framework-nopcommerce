@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObject.user.*;
+import pageObject.NopCommerce.user.*;
 
 public class User_04_Switch_Page extends BaseTest {
     private WebDriver driver;

@@ -13,11 +13,10 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObject.admin.AdminLoginPageObject;
-import pageObject.user.*;
+import pageObject.NopCommerce.admin.AdminLoginPageObject;
+import pageObject.NopCommerce.user.*;
 import pageUIs.jQuery.UploadFile.BasePageUploadFile;
-import pageUIs.user.BasePageUI;
-import pageUIs.user.RegisterPageUi;
+import pageUIs.NopCommerce.user.BasePageUI;
 
 
 public class BasePage {
@@ -216,12 +215,16 @@ public class BasePage {
         return getWebElement(driver, attributeName).getAttribute(attributeName);
     }
 
+    public String getElementAttribute(WebDriver driver, String locatorType, String atrributeName, String...dynamicValue) {
+        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValue)).getAttribute(atrributeName);
+    }
+
     public String getElementText(WebDriver driver, String locatorType) {
         return getWebElement(driver, locatorType).getText();
     }
 
     public String getElementText(WebDriver driver, String locatorType, String... dynamicValues) {
-        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getText();
+        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getText().trim();
     }
 
     public String getElementCssValue(WebDriver driver, String locatorType, String propertyName) {
@@ -248,7 +251,8 @@ public class BasePage {
     }
 
     public void checkToDefaultCheckboxOrRadio(WebDriver driver, String locatorType, String... dynamicValues) {
-        WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+        locatorType = getDynamicXpath(locatorType, dynamicValues);
+        WebElement element = getWebElement(driver, locatorType);
         if (!element.isSelected()) {
             element.click();
         }
@@ -648,6 +652,80 @@ public class BasePage {
     public void clickToLinkByName(WebDriver driver, String linkText) {
         waitForElementVisible(driver, BasePageUI.DYNAMIC_LINK_BY_TEXT,linkText);
         clickToElement(driver,BasePageUI.DYNAMIC_LINK_BY_TEXT,linkText);
+    }
+
+
+
+
+
+    // HRM - Menu
+    public void openMenuPage(WebDriver driver, String menuPageName){
+        waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+        clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+    }
+    // HRM - Sub Menu
+    public void openSubMenu(WebDriver driver, String menuPageName, String subMenuPageName){
+        waitForElementVisible(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+        clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+
+        waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+        clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+    }
+    // HRM - Child Sub Menu
+    public void openChildSubMenu(WebDriver driver, String menuPageName, String subMenuPageName, String childSubMenuPageName){
+        waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+        clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, menuPageName);
+
+        waitForElementVisible(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+        hoverMouseToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+
+        waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+        clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+    }
+    // HRM - Click to button
+    public void clickToButtonByID(WebDriver driver, String idButtonName){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.BUTTON_BY_ID,idButtonName);
+        clickToElement(driver, pageUIs.HRM.BasePageUI.BUTTON_BY_ID,idButtonName);
+    }
+    // HRM - Sendkey to textbox
+    public void enterToTextboxByID(WebDriver driver, String idTextboxName, String value){
+        waitForElementVisible(driver, pageUIs.HRM.BasePageUI.TEXTBOX_BY_ID, idTextboxName);
+        sendkeyToElement(driver, pageUIs.HRM.BasePageUI.TEXTBOX_BY_ID, value, idTextboxName);
+    }
+    // HRM - get value to textbox
+    public String getTextboxValueByID(WebDriver driver, String idTextboxName){
+        waitForElementVisible(driver, pageUIs.HRM.BasePageUI.TEXTBOX_BY_ID, idTextboxName);
+        return getElementAttribute(driver, pageUIs.HRM.BasePageUI.TEXTBOX_BY_ID,"value", idTextboxName);
+    }
+
+    // HRM - select Dropdown
+    public void selectItemInDropdownByID(WebDriver driver, String idDropdownName, String valueItem){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.DROPDOWN_BY_ID, idDropdownName);
+        selectItemInDefaultDropdown(driver, pageUIs.HRM.BasePageUI.DROPDOWN_BY_ID,valueItem, idDropdownName);
+    }
+
+    // HRM - get Dropdown selected value
+    public String getSelectedValueItemInDropdownByID(WebDriver driver, String idDropdownName, String valueItem){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.DROPDOWN_BY_ID, idDropdownName);
+        return getSelectItemDefaultDropdown(driver, pageUIs.HRM.BasePageUI.DROPDOWN_BY_ID,valueItem, idDropdownName);
+    }
+
+    public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.CHECKBOX_BY_LABEL);
+        checkToDefaultCheckboxOrRadio(driver, pageUIs.HRM.BasePageUI.CHECKBOX_BY_LABEL,checkboxLabelName);
+    }
+
+    public void clickToRadioByLabel(WebDriver driver, String radioLabelName){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.RADIO_BY_LABEL);
+        checkToDefaultCheckboxOrRadio(driver, pageUIs.HRM.BasePageUI.RADIO_BY_LABEL,radioLabelName);
+    }
+
+
+    public String getValuelayInTableIDAtColumnNameAndRowIndex(WebDriver driver,String tableID, String headerName, String rowIndex) {
+        int columnIndex = getElementSize(driver, pageUIs.HRM.BasePageUI.TABLE_HEADER_BY_ID_AND_NAME,tableID,headerName) + 1;
+        waitForElementVisible(driver, pageUIs.HRM.BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX,tableID,rowIndex, String.valueOf(columnIndex));
+        return getElementText(driver, pageUIs.HRM.BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX,tableID,rowIndex, String.valueOf(columnIndex));
+
     }
 
     private long longTimeout = GlobalConstains.LONG_TIME;

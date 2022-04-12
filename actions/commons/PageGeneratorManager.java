@@ -1,9 +1,9 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
-import pageObject.admin.AdminDashboardPageObject;
-import pageObject.admin.AdminLoginPageObject;
-import pageObject.user.*;
+import pageObject.NopCommerce.admin.AdminDashboardPageObject;
+import pageObject.NopCommerce.admin.AdminLoginPageObject;
+import pageObject.NopCommerce.user.*;
 
 public class PageGeneratorManager {
     public static UserCustomerInfoPageObject getMyAccountPage(WebDriver driver){

@@ -1,10 +1,9 @@
-package pageObject.user;
+package pageObject.NopCommerce.user;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageObject.jQuery.DataTable.HomePageObject;
-import pageUIs.user.LoginPageUi;
+import pageUIs.NopCommerce.user.LoginPageUi;
 
 public class UserLoginPageObject extends BasePage {
     private WebDriver driver;

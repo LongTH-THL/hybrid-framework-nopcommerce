@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObject.user.UserHomePageObject;
-import pageObject.user.UserLoginPageObject;
-import pageObject.user.UserRegisterPageObject;
+import pageObject.NopCommerce.user.UserHomePageObject;
+import pageObject.NopCommerce.user.UserLoginPageObject;
+import pageObject.NopCommerce.user.UserRegisterPageObject;
 
 public class User_02_Login_Page_Generator_Manage_I extends BaseTest {
     private WebDriver driver;
