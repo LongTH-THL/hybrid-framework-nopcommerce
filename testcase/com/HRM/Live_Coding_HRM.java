@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
 
 public class Live_Coding_HRM extends BaseTest {
     private WebDriver driver;
-    String employeeID, statusValue;
+    String employeeID, statusValue, name;
 
     LoginPageObject loginPage;
     AddEmployeePageObject addEmployeePage;
@@ -27,6 +27,7 @@ public class Live_Coding_HRM extends BaseTest {
         driver = getBrowserDriver(browserName, appUrl);
 
         statusValue = "Enable";
+        name = "Automation" + randomData();
 
         loginPage = PageGenerator.getLoginPage(driver);
         log.info("Pre-Condition - Step 02: Login with Admin Role");
@@ -49,7 +50,7 @@ public class Live_Coding_HRM extends BaseTest {
         addEmployeePage = PageGenerator.getAddEmployeePage(driver);
 
         log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"firstName","Automation");
+        addEmployeePage.enterToTextboxByID(driver,"firstName",name);
 
         log.info("Add_New_01 - Step 04: Enter valid info to 'Last Name' textbox");
         addEmployeePage.enterToTextboxByID(driver,"lastName","FC");
@@ -58,19 +59,19 @@ public class Live_Coding_HRM extends BaseTest {
         employeeID = addEmployeePage.getTextboxValueByID(driver,"employeeId");
 
         log.info("Add_New_01 - Step 06: Click to 'Creat Login Details' checkbox");
-        addEmployeePage.clickToCheckboxByLabel(driver,"Creat Login Details");
+        addEmployeePage.clickToCheckboxByLabel(driver,"Create Login Details");
 
         log.info("Add_New_01 - Step 07: Enter valid info to 'User Name' textbox");
         addEmployeePage.enterToTextboxByID(driver,"user_name","long_magic");
 
         log.info("Add_New_01 - Step 08: Enter valid info to 'Password' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"user_password","12345678");
+        addEmployeePage.enterToTextboxByID(driver,"user_password","12345678Abc.");
 
         log.info("Add_New_01 - Step 09: Enter valid info to 'Confirm Password' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"re_password","12345678");
+        addEmployeePage.enterToTextboxByID(driver,"re_password","12345678Abc.");
 
-        log.info("Add_New_01 - Step 10: Select '" +statusValue+ "' value in 'Status' dropdown");
-        addEmployeePage.selectItemInDropdownByID(driver,"status", statusValue);
+//        log.info("Add_New_01 - Step 10: Select '" +statusValue+ "' value in 'Status' dropdown");
+//        addEmployeePage.selectItemInDropdownByID(driver,"status", statusValue);
 
         log.info("Add_New_01 - Step 11: Click to 'Save' button");
         addEmployeePage.clickToButtonByID(driver,"btnSave");
@@ -81,10 +82,13 @@ public class Live_Coding_HRM extends BaseTest {
         employeeListPage = PageGenerator.getEmployeeList(driver);
 
         log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
-        employeeListPage.enterToTextboxByID(driver,"empsearch_employee_name_empName"," Automation");
+        employeeListPage.sleepInSecond(3);
+        employeeListPage.enterToTextboxByID(driver,"empsearch_employee_name_empName","Automation FC");
+        employeeListPage.sleepInSecond(3);
 
         log.info("Add_New_01 - Step 14: Click to 'Search' button");
         employeeListPage.clickToButtonByID(driver,"searchBtn");
+        employeeListPage.sleepInSecond(3);
 
         log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Table'");
         verifyEquals(employeeListPage.getElementText(driver,"resultTable","ID","1"),employeeID);

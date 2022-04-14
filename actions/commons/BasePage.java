@@ -251,9 +251,8 @@ public class BasePage {
     }
 
     public void checkToDefaultCheckboxOrRadio(WebDriver driver, String locatorType, String... dynamicValues) {
-        locatorType = getDynamicXpath(locatorType, dynamicValues);
-        WebElement element = getWebElement(driver, locatorType);
-        if (!element.isSelected()) {
+        WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
+        if (!element.isSelected()){
             element.click();
         }
     }
@@ -711,12 +710,12 @@ public class BasePage {
     }
 
     public void clickToCheckboxByLabel(WebDriver driver, String checkboxLabelName){
-        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.CHECKBOX_BY_LABEL);
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.CHECKBOX_BY_LABEL,checkboxLabelName);
         checkToDefaultCheckboxOrRadio(driver, pageUIs.HRM.BasePageUI.CHECKBOX_BY_LABEL,checkboxLabelName);
     }
 
     public void clickToRadioByLabel(WebDriver driver, String radioLabelName){
-        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.RADIO_BY_LABEL);
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.RADIO_BY_LABEL,radioLabelName);
         checkToDefaultCheckboxOrRadio(driver, pageUIs.HRM.BasePageUI.RADIO_BY_LABEL,radioLabelName);
     }
 
