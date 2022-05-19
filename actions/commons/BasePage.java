@@ -13,6 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObject.HRM.DashboardPageObject;
+import pageObject.HRM.LoginPageObject;
+import pageObject.HRM.PageGenerator;
 import pageObject.NopCommerce.admin.AdminLoginPageObject;
 import pageObject.NopCommerce.user.*;
 import pageUIs.jQuery.UploadFile.BasePageUploadFile;
@@ -224,7 +227,7 @@ public class BasePage {
     }
 
     public String getElementText(WebDriver driver, String locatorType, String... dynamicValues) {
-        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getText().trim();
+        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getText();
     }
 
     public String getElementCssValue(WebDriver driver, String locatorType, String propertyName) {
@@ -669,6 +672,8 @@ public class BasePage {
 
         waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
         clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, subMenuPageName);
+
+        areJQueryAndJSLoadedSuccess(driver);
     }
     // HRM - Child Sub Menu
     public void openChildSubMenu(WebDriver driver, String menuPageName, String subMenuPageName, String childSubMenuPageName){
@@ -680,6 +685,8 @@ public class BasePage {
 
         waitForElementClickable(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
         clickToElement(driver,pageUIs.HRM.BasePageUI.MENU_BY_PAGE_NAME, childSubMenuPageName);
+
+        areJQueryAndJSLoadedSuccess(driver);
     }
     // HRM - Click to button
     public void clickToButtonByID(WebDriver driver, String idButtonName){
@@ -720,13 +727,33 @@ public class BasePage {
     }
 
 
-    public String getValuelayInTableIDAtColumnNameAndRowIndex(WebDriver driver,String tableID, String headerName, String rowIndex) {
+    public String getValuelInTableIDAtColumnNameAndRowIndex(WebDriver driver, String tableID, String headerName, String rowIndex) {
         int columnIndex = getElementSize(driver, pageUIs.HRM.BasePageUI.TABLE_HEADER_BY_ID_AND_NAME,tableID,headerName) + 1;
         waitForElementVisible(driver, pageUIs.HRM.BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX,tableID,rowIndex, String.valueOf(columnIndex));
         return getElementText(driver, pageUIs.HRM.BasePageUI.TABLE_ROW_BY_COLUMN_INDEX_AND_ROW_INDEX,tableID,rowIndex, String.valueOf(columnIndex));
 
     }
 
+    public DashboardPageObject loginToSystem(WebDriver driver, String userName, String password){
+        waitForElementVisible(driver, pageUIs.HRM.BasePageUI.USER_LOGIN_TEXTBOX);
+        sendkeyToElement(driver, pageUIs.HRM.BasePageUI.USER_LOGIN_TEXTBOX, userName);
+        sendkeyToElement(driver, pageUIs.HRM.BasePageUI.USER_PASSWORD_TEXTBOX, password);
+        clickToElement(driver, pageUIs.HRM.BasePageUI.LOGIN_BUTTON);
+        return PageGenerator.getDashboardPage(driver);
+    }
+
+    public LoginPageObject logoutToSystem(WebDriver driver){
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.WELCOME_USER_LINK);
+        clickToElement(driver, pageUIs.HRM.BasePageUI.WELCOME_USER_LINK);
+        waitForElementClickable(driver, pageUIs.HRM.BasePageUI.LOGOUT_LINK);
+        clickToElement(driver, pageUIs.HRM.BasePageUI.LOGOUT_LINK);
+        return PageGenerator.getLoginPage(driver);
+
+    }
+
+    public void uploadImage(WebDriver driver, String filePath) {
+        getWebElement(driver, pageUIs.HRM.BasePageUI.UPLOAD_FILE).sendKeys(filePath);
+    }
     private long longTimeout = GlobalConstains.LONG_TIME;
     private long shortTimeout = GlobalConstains.SHORT_TIME;
 }

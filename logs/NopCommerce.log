@@ -1,7 +1,0 @@
-[INFO ] [2022-03-03 01:00:00,169] Login_01_Empty_Data - Step_01: Verify Login Page is display
-[INFO ] [2022-03-03 01:00:00,674] Login_01_Empty_Data - Step_02: Click Login Button
-[INFO ] [2022-03-03 01:00:00,814] Login_01_Empty_Data - Step_03: Verify Error Message At Email Textbox
-[INFO ] [2022-03-03 01:00:00,857] Login_02_Invalid_Data - Step_01: Verify Login Page is display
-[INFO ] [2022-03-03 01:00:01,326] Login_02_Invalid_Data - Step_02: Enter invalid Email to Email Textbox
-[INFO ] [2022-03-03 01:00:01,426] Login_02_Invalid_Data - Step_03: Click login button
-[INFO ] [2022-03-03 01:00:01,519] Login_02_Invalid_Data - Step_04: Verify Error Message At Email Textbox

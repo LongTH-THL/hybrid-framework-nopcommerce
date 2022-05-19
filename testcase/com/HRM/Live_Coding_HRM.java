@@ -1,6 +1,7 @@
 package com.HRM;
 
 import commons.BaseTest;
+import commons.GlobalConstains;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,8 +13,9 @@ import java.lang.reflect.Method;
 
 public class Live_Coding_HRM extends BaseTest {
     private WebDriver driver;
-    String employeeID, statusValue, name;
-
+    String adminUserName, adminPassword, empFirstName, empLastName, empUserName, empPassword, employeeID, statusValue;
+    String empFullName;
+    String avatarFilePath = GlobalConstains.UPLOAD_FILE + "a Dao.jpeg";
     LoginPageObject loginPage;
     AddEmployeePageObject addEmployeePage;
     DashboardPageObject dashboardPage;
@@ -27,12 +29,20 @@ public class Live_Coding_HRM extends BaseTest {
         driver = getBrowserDriver(browserName, appUrl);
 
         statusValue = "Enable";
-        name = "Automation" + randomData();
+        adminUserName = "Admin";
+        adminPassword = "admin123";
+
+        empFirstName = "Automation";
+        empLastName = "Fc";
+        empUserName = "Automation";
+        empPassword = "123456*A";
+        empFullName = empFirstName + " " + empLastName;
+
 
         loginPage = PageGenerator.getLoginPage(driver);
         log.info("Pre-Condition - Step 02: Login with Admin Role");
-        loginPage.enterToTextboxByID(driver,"txtUsername","Admin");
-        loginPage.enterToTextboxByID(driver,"txtPassword","admin123");
+        loginPage.enterToTextboxByID(driver,"txtUsername",adminUserName);
+        loginPage.enterToTextboxByID(driver,"txtPassword",adminPassword);
         loginPage.clickToButtonByID(driver,"btnLogin");
         dashboardPage = PageGenerator.getDashboardPage(driver);
 
@@ -50,10 +60,10 @@ public class Live_Coding_HRM extends BaseTest {
         addEmployeePage = PageGenerator.getAddEmployeePage(driver);
 
         log.info("Add_New_01 - Step 03: Enter valid info to 'First Name' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"firstName",name);
+        addEmployeePage.enterToTextboxByID(driver,"firstName",empFirstName);
 
         log.info("Add_New_01 - Step 04: Enter valid info to 'Last Name' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"lastName","FC");
+        addEmployeePage.enterToTextboxByID(driver,"lastName",empLastName);
 
         log.info("Add_New_01 - Step 05: Get value of 'Employee ID'");
         employeeID = addEmployeePage.getTextboxValueByID(driver,"employeeId");
@@ -62,13 +72,13 @@ public class Live_Coding_HRM extends BaseTest {
         addEmployeePage.clickToCheckboxByLabel(driver,"Create Login Details");
 
         log.info("Add_New_01 - Step 07: Enter valid info to 'User Name' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"user_name","long_magic");
+        addEmployeePage.enterToTextboxByID(driver,"user_name",empUserName);
 
         log.info("Add_New_01 - Step 08: Enter valid info to 'Password' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"user_password","12345678Abc.");
+        addEmployeePage.enterToTextboxByID(driver,"user_password",empPassword);
 
         log.info("Add_New_01 - Step 09: Enter valid info to 'Confirm Password' textbox");
-        addEmployeePage.enterToTextboxByID(driver,"re_password","12345678Abc.");
+        addEmployeePage.enterToTextboxByID(driver,"re_password",empPassword);
 
 //        log.info("Add_New_01 - Step 10: Select '" +statusValue+ "' value in 'Status' dropdown");
 //        addEmployeePage.selectItemInDropdownByID(driver,"status", statusValue);
@@ -83,21 +93,44 @@ public class Live_Coding_HRM extends BaseTest {
 
         log.info("Add_New_01 - Step 13: Enter valid info to 'Employee Name' textbox");
         employeeListPage.sleepInSecond(3);
-        employeeListPage.enterToTextboxByID(driver,"empsearch_employee_name_empName","Automation FC");
+        employeeListPage.enterToTextboxByID(driver,"empsearch_employee_name_empName",empFullName);
         employeeListPage.sleepInSecond(3);
 
         log.info("Add_New_01 - Step 14: Click to 'Search' button");
         employeeListPage.clickToButtonByID(driver,"searchBtn");
         employeeListPage.sleepInSecond(3);
 
-        log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Table'");
-        verifyEquals(employeeListPage.getElementText(driver,"resultTable","ID","1"),employeeID);
-        verifyEquals(employeeListPage.getElementText(driver,"resultTable","Last Name","1"),"FC");
-
+//        log.info("Add_New_01 - Step 15: Verify Employee Information displayed at 'Table'");
+//        verifyEquals(employeeListPage.getValuelInTableIDAtColumnNameAndRowIndex(driver,"resultTable","ID","1"),employeeID);
+//        verifyEquals(employeeListPage.getValuelInTableIDAtColumnNameAndRowIndex(driver,"resultTable","Last Name","1"),"FC");
     }
 
     @Test
     public void Employee_02_Upload_Avatar(){
+        log.info("Upload_Avatar_02 - Step 01: Click to 'Logout' button");
+        loginPage = employeeListPage.logoutToSystem(driver);
+        dashboardPage = loginPage.loginToSystem(driver,empUserName,empPassword);
+
+        log.info("Upload_Avatar_02 - Step 02: Open Personal Detail page");
+        dashboardPage.openMenuPage(driver,"My Info");
+        personalDetailPage = PageGenerator.getPersonalDetailsPage(driver);
+
+        log.info("Upload_Avatar_02 - Step 03: Click to Change Photo image");
+        personalDetailPage.clickToChangePhotoImage();
+
+        log.info("Upload_Avatar_02 - Step 04: Upload new Avatar image");
+        personalDetailPage.uploadImage(driver, avatarFilePath);
+
+        log.info("Upload_Avatar_02 - Step 05: Click to Upload button");
+        personalDetailPage.clickToButtonByID(driver,"btnSave");
+
+        log.info("Upload_Avatar_02 - Step 06: Verify new Successmessage is displayed");
+        veryfiTrue(personalDetailPage.isUploadAvatarSuccessMessageDisplayed());
+
+        log.info("Upload_Avatar_02 - Step 06: Verify new Avatar is displayed");
+        veryfiTrue(personalDetailPage.isNewAvatarImageDisplayed());
+
+
     }
 
     @Test

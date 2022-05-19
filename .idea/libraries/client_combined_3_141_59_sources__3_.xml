@@ -7,6 +7,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/libraries/Lib/client-combined-3.141.59-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/testng-6.14.3-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
